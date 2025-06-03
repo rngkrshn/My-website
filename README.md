@@ -1,6 +1,16 @@
 # Portfolio Website
 
-This is a portfolio website built using Next.js and Tailwind CSS. It includes a modern design and is structured to showcase your work and skills effectively.
+This is a modern portfolio website built using Next.js and Tailwind CSS. It features a responsive design, interactive elements, and sections to showcase skills, projects, and contact information.
+
+## Features
+
+- Modern, responsive design
+- Interactive animations and hover effects
+- Skills showcase section
+- Projects portfolio
+- Contact information
+- Downloadable CV
+- Mobile-friendly interface
 
 ## Getting Started
 
@@ -9,8 +19,15 @@ This is a portfolio website built using Next.js and Tailwind CSS. It includes a 
 - npm (v7 or later)
 
 ### Installation
-1. Clone the repository.
-2. Run `npm install` to install dependencies.
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/rngkrshn/My-website.git
+   cd My-website
+   ```
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
 
 ### Development
 Run the development server:
@@ -18,7 +35,7 @@ Run the development server:
 npm run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) to view the website in your browser.
 
 ### Build
 To create a production build:
