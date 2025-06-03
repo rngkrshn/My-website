@@ -1,24 +1,33 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Portfolio Website
+
+This is a portfolio website built using Next.js and Tailwind CSS. It includes a modern design and is structured to showcase your work and skills effectively.
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
+- Node.js (v16 or later)
+- npm (v7 or later)
 
+### Installation
+1. Clone the repository.
+2. Run `npm install` to install dependencies.
+
+### Development
+Run the development server:
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Build
+To create a production build:
+```bash
+npm run build
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Deployment
+Follow the Next.js deployment documentation for deploying your site to platforms like Vercel or Netlify.
 
 ## Learn More
 
