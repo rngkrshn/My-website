@@ -7,7 +7,7 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
+    --background: #000000;
     --foreground: #ededed;
   }
 }
@@ -20,14 +20,17 @@ html {
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background-color: #f4f4f9;
-  color: #333;
+  background-color: var(--background);
+  color: var(--foreground);
   padding-top: 64px; /* Height of the navbar */
+  transition: background-color 0.3s ease, color 0.3s ease;
+  min-height: 100vh;
 }
 
 main {
   min-height: calc(100vh - 64px);
   padding: 20px;
+  background-color: var(--background);
 }
 
 .hero {
@@ -117,4 +120,12 @@ header a:hover::after {
 .animate-float-delayed {
   animation: float-delayed 8s ease-in-out infinite;
   animation-delay: 2s;
+}
+
+/* Dark mode overrides for components */
+@media (prefers-color-scheme: dark) {
+  .project {
+    background: #111111;
+    box-shadow: 0 2px 4px rgba(255, 255, 255, 0.1);
+  }
 }
