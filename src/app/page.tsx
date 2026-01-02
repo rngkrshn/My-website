@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import { useState, useEffect } from "react";
 
 export default function Home() {
@@ -34,14 +33,10 @@ export default function Home() {
                   transform transition-all duration-500 hover:scale-110 hover:shadow-blue-500/50 hover:border-blue-400
                   cursor-pointer flex items-center justify-center">
                   {!imageError ? (
-                    <Image
+                    <img
                       src="/profile.jpg"
                       alt="Srirangan Krishnaswamy"
-                      width={320}
-                      height={320}
                       className="object-cover w-full h-full"
-                      priority
-                      unoptimized
                       onError={() => setImageError(true)}
                     />
                   ) : (
