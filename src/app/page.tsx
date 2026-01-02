@@ -84,7 +84,7 @@ export default function Home() {
                     I'm a high school student interested in computer science and mechanical engineering, with a focus on robotics, AI, and systems that interact with the real world. I enjoy working across software and hardware—building things, breaking them, and figuring out how to make them more reliable and useful. My interests include robotics, simulation, machine learning, and systems-level thinking, especially where theory meets real-world constraints.
                   </p>
                   <a
-                    href="/resume.pdf"
+                    href={`${process.env.NODE_ENV === 'production' ? '/My-website' : ''}/resume.pdf`}
                     download="Srirangan_Krishnaswamy_Resume.pdf"
                     className="inline-flex items-center gap-2 font-medium py-3 px-6 rounded-lg 
                       transform transition-all duration-300 hover:scale-105 hover:shadow-lg 
