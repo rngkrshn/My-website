@@ -13,18 +13,20 @@ export default function Home() {
   };
 
   useEffect(() => {
-    // Check if image exists on mount
+    // Detect basePath from current URL first
+    const path = window.location.pathname;
+    const pathParts = path.split('/').filter(Boolean);
+    let detectedBasePath = '';
+    if (pathParts.length > 0 && pathParts[0] !== '') {
+      detectedBasePath = `/${pathParts[0]}`;
+      setBasePath(detectedBasePath);
+    }
+    
+    // Check if image exists on mount with correct basePath
     const img = new window.Image();
     img.onerror = () => setImageError(true);
     img.onload = () => setImageError(false);
-    img.src = "/profile.jpg";
-    
-    // Detect basePath from current URL
-    const path = window.location.pathname;
-    const pathParts = path.split('/').filter(Boolean);
-    if (pathParts.length > 0 && pathParts[0] !== '') {
-      setBasePath(`/${pathParts[0]}`);
-    }
+    img.src = `${detectedBasePath}/profile.jpg`;
   }, []);
 
   return (
@@ -42,7 +44,7 @@ export default function Home() {
                   cursor-pointer flex items-center justify-center">
                   {!imageError ? (
                     <img
-                      src="/profile.jpg"
+                      src={`${basePath}/profile.jpg`}
                       alt="Srirangan Krishnaswamy"
                       className="object-cover w-full h-full"
                       onError={() => setImageError(true)}
