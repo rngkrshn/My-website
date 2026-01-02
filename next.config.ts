@@ -1,12 +1,8 @@
 import type { NextConfig } from "next";
 
-const isProd = process.env.NODE_ENV === 'production';
-const basePath = process.env.BASE_PATH || (isProd ? '/My-website' : '');
-
 const nextConfig: NextConfig = {
   output: 'export',
-  basePath: basePath,
-  assetPrefix: basePath,
+  // basePath will be automatically injected by GitHub Actions workflow
   images: {
     unoptimized: true,
     domains: ['api.dicebear.com'],
@@ -18,6 +14,8 @@ const nextConfig: NextConfig = {
       },
     ],
   },
+  // Ensure trailingSlash for GitHub Pages compatibility
+  trailingSlash: true,
 };
 
 export default nextConfig;
